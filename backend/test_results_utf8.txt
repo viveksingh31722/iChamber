@@ -1,0 +1,10 @@
+﻿Login Status: 200
+Login Body: {"success":true,"message":"Login successful","data":{"user":{"_id":"69a2db0946eb923d6cf8a72e","firstName":"Vivek","lastName":"Singh","email":"viveksingh31722@gmail.com","role":"user","isVerified":true,"createdAt":"2026-02-28T12:09:45.389Z"},"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YTJkYjA5NDZlYjkyM2Q2Y2Y4YTcyZSIsImlhdCI6MTc3MjI4MDY1MiwiZXhwIjoxNzcyMjgxNTUyfQ.TW9MAgtP0uJr6A35-9n81MUtIsuKxq36BRnAV6PviwI"}}
+Cookies received: [
+  'accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YTJkYjA5NDZlYjkyM2Q2Y2Y4YTcyZSIsImlhdCI6MTc3MjI4MDY1MiwiZXhwIjoxNzcyMjgxNTUyfQ.TW9MAgtP0uJr6A35-9n81MUtIsuKxq36BRnAV6PviwI; Path=/; Expires=Sat, 28 Feb 2026 12:25:52 GMT; HttpOnly; SameSite=Lax',
+  'refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YTJkYjA5NDZlYjkyM2Q2Y2Y4YTcyZSIsImlhdCI6MTc3MjI4MDY1MiwiZXhwIjoxNzcyODg1NDUyfQ.fiJIt3bCfAqXrFC9D61jSMKHJftiDht5B9E4p6amwSw; Path=/; Expires=Sat, 07 Mar 2026 12:10:52 GMT; HttpOnly; SameSite=Lax'
+]
+Investor Submit Status: 500
+Investor Submit Body: {"success":false,"error":"InvestorApplication validation failed: occupation: `investor` is not a valid enum value for path `occupation`."}
+Investor List Status: 200
+Investor List Body: {"success":true,"message":"Applications retrieved successfully","data":[]}
