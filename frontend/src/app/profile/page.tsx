@@ -1,8 +1,10 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import Container from '@/components/layout/Container';
+import Navbar from '@/components/layout/Navbar';
 import Button from '@/components/ui/Button';
 
 export default function ProfilePage() {
@@ -11,14 +13,17 @@ export default function ProfilePage() {
   const [submitting, setSubmitting] = useState(false);
   const [message, setMessage] = useState({ type: '', text: '' });
 
+  const router = useRouter();
+
   useEffect(() => {
     if (user) {
       setFormData({ firstName: user.firstName, lastName: user.lastName });
+    } else if (!loading) {
+      router.push('/register');
     }
-  }, [user]);
+  }, [user, loading, router]);
 
-  if (loading) return <div className="pt-40 text-center">Loading...</div>;
-  if (!user) return <div className="pt-40 text-center">Please login to view this page.</div>;
+  if (loading || !user) return <div className="pt-40 text-center">Loading...</div>;
 
   const handleUpdate = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -36,6 +41,7 @@ export default function ProfilePage() {
 
   return (
     <div className="min-h-screen pt-32 pb-20 bg-gray-50">
+      <Navbar />
       <Container>
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl font-bold text-primary mb-8 px-4">Account Settings</h1>

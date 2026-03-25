@@ -25,6 +25,14 @@ app.use('/api/investors', require('./modules/investors/investor.routes'));
 app.use('/api/members', require('./modules/members/member.routes'));
 app.use('/api/contact', require('./modules/contact/contact.routes'));
 app.use('/api/subscriptions', require('./modules/subscriptions/subscription.routes'));
+app.use('/api/events', require('./modules/events/event.routes'));
+app.use('/api/media', require('./modules/media/media.routes'));
+app.use('/api/publications', require('./modules/publications/publication.routes'));
+app.use('/api/governance', require('./modules/governance/governance.routes'));
+app.use('/api/platforms', require('./modules/platforms/platform.routes'));
+app.use('/api/centers', require('./modules/centers/center.routes'));
+app.use('/api/gallery', require('./modules/gallery/gallery.routes'));
+app.use('/api/partners', require('./modules/partners/partner.routes'));
 
 // Health check
 app.get('/health', (req, res) => {
